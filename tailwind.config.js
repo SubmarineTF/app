@@ -8,7 +8,10 @@ export default {
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
         './resources/js/**/*.tsx',
+        'node_modules/preline/dist/*.js',
     ],
+
+    darkMode: 'media',
 
     theme: {
         extend: {
@@ -18,5 +21,8 @@ export default {
         },
     },
 
-    plugins: [forms],
+    plugins: [
+        require('@tailwindcss/forms'),
+        require('preline/plugin'),
+    ],
 };
