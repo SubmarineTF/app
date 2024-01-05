@@ -10,3 +10,12 @@ export type PageProps<T extends Record<string, unknown> = Record<string, unknown
         user: User;
     };
 };
+
+export interface Workspace {
+    id: number;
+    name: string;
+    status: string;
+    repo: string;
+    latestChange: string;
+}
+

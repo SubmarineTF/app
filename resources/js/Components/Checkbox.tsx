@@ -6,7 +6,7 @@ export default function Checkbox({ className = '', ...props }: InputHTMLAttribut
             {...props}
             type="checkbox"
             className={
-                'rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800 ' +
+                'shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 pointer-events-none focus:ring-blue-500 ' +
                 className
             }
         />
