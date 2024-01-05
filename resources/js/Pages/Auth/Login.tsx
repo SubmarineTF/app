@@ -104,8 +104,8 @@ export default function Login({ status, canResetPassword }: { status?: string, c
                     </label>
                 </div>
 
-                <div className="flex items-center justify-center mt-4">
-                    <PrimaryButton className="ms-4" disabled={processing}>
+                <div className="mt-4">
+                    <PrimaryButton disabled={processing}>
                         Log in
                     </PrimaryButton>
                 </div>
