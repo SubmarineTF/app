@@ -68,7 +68,17 @@ export default function Login({ status, canResetPassword }: { status?: string, c
                 </div>
 
                 <div className="mt-4">
-                    <InputLabel htmlFor="password" value="Password" />
+                    <div className="flex justify-between items-center">
+                        <InputLabel htmlFor="password" value="Password" />
+                        {canResetPassword && (
+                            <Link
+                                className="text-sm text-blue-600 decoration-2 hover:underline font-medium"
+                                href={route('password.request')}
+                            >
+                                Forgot password?
+                            </Link>
+                        )}
+                    </div>
 
                     <TextInput
                         id="password"
@@ -95,15 +105,6 @@ export default function Login({ status, canResetPassword }: { status?: string, c
                 </div>
 
                 <div className="flex items-center justify-center mt-4">
-                    {canResetPassword && (
-                        <Link
-                            href={route('password.request')}
-                            className="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                        >
-                            Forgot your password?
-                        </Link>
-                    )}
-
                     <PrimaryButton className="ms-4" disabled={processing}>
                         Log in
                     </PrimaryButton>

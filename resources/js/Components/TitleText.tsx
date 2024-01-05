@@ -1,4 +1,4 @@
-import {HTMLAttributes, LabelHTMLAttributes} from 'react';
+import {HTMLAttributes} from 'react';
 
 export default function TitleText({ value, className = '', children, ...props }: HTMLAttributes<HTMLParagraphElement> & { value?: string }) {
     return (
